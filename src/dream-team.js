@@ -22,6 +22,7 @@ function createDreamTeam(members) {
   members.forEach(cur => {
     if (typeof cur === 'string') abbr.push(cur.trimStart()[0].toUpperCase())
   });
+  // localeCompare() is also possible
   abbr = abbr.sort((a, b) => a < b ? -1 : 1);
 
   return abbr.join('');
