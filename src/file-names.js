@@ -23,6 +23,7 @@ function renameFiles(names) {
     if (table.has(name)) {
       let count = table.get(name);
       let currentName = name + `(${count})`;
+
       countedNames.push(currentName);
       // a found name
       table.set(name, count + 1);
