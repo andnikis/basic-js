@@ -19,7 +19,7 @@ function transform(arr) {
 
   let transformed = [];
   let action = '';
-  // the next element isn't used
+  // the element can't be used for -prev actions
   let isDiscardNext = false;
 
   for (let i = 0, j = 0; i < arr.length; i++) {
@@ -55,7 +55,7 @@ function transform(arr) {
       else
         transformed[j++] = arr[i];
 
-      // there are only prev actions
+      // there can be only prev actions
       isDiscardNext = false;
     }
   }
