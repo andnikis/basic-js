@@ -17,10 +17,11 @@ const { NotImplementedError } = require('../extensions/index.js');
 function countCats(matrix) {
   let catsCount = 0;
 
-  for (let i = 0; i < matrix.length; i++) {
+  for (let i = 0, len = matrix.length; i < len; i++) {
     // can be many '^^' in the line
-    for (let j = 0; j < matrix[i].length; j++)
-      if (matrix[i][j] === '^^') catsCount++;
+    let line = matrix[i];
+    for (let j = 0, lenj = line.length; j < lenj; j++)
+      if (line[j] === '^^') catsCount++;
   }
 
   return catsCount;
